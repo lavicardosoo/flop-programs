@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flop QR Code</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Who is this diva(QR code'version)</h1>
+    <div class="container">
+        <div class="card">
+            <h2 style="text-align: center;">Adicione aqui o qr code</h2>
+            <div id="videobox">
+                <video id="videocis"></video>
+            </div>
+            <div class="btnpara">
+                <p style="text-align: center;font-size: 15pt;">Câmera detectada!</p>
+                <button>Para a gravação</button>
+            </div>
+
+            
+        </div>
+        <div class="card">
+            <img id="imgtrans" src="saori.png">
+            <h2 style="text-align: center;">Informações da diva</h2>
+            
+            <p id="divaname" style="text-align: left;">Nome:Saori Kido</p>
+            <p id="divaprof" style="text-align: left;">Profissão:Todas</p>
+            <p id="divafood" style="text-align: left;">Comida Preferida:Chocotony</p>
+        </div>
+    </div>
+    <script type="module">
+        import QrScanner from '/flop-qrcode/qr-scanner.min.js'
+
+        let video = document.getElementById('videocis');
+        let content = document.getElementById('video')
+        let name = document.getElementById('divaname');
+        let prof = document.getElementById('divaprof');
+        let food = document.getElementById('divafood');
+        let img = document.getElementById('imgtrans');
+
+
+        let cardatas = {'rodrigo.jpg':{'name':'Rodrigo Apresentador', 'prof':'Apresentador Multifacetado', 'Comida Preferida':'Cervejota'},
+        'saori.png':{'name':'Saori Kido', 'prof':'Todas(Até mais que a barbie)', 'Comida Preferida':'Chocotonyyy'},
+        'juju.jpg':{'name':'Juju Oliveira', 'prof':'Digital Influencer', 'Comida Preferida':'Marmitex e Coca'}
+    }
+
+        let scanner = new QrScanner(video, result => {
+            img.src = result.data
+            name.innerHTML = cardatas[result.data]['name']
+            prof.innerHTML = 'Profissão:'+cardatas[result.data]['prof']
+            food.innerHTML = 'Comida Preferida:'+cardatas[result.data]['Comida Preferida']
+        },{
+				highlightScanRegion:true,
+				highlightCodeOutline:true
+		})
+
+        scanner.start()
+    </script>
+
+
+</body>
+</html>
