@@ -1,0 +1,118 @@
+@font-face {
+    font-family: "font";
+    src: url("assets/DMSans-Regular.ttf") format('truetype');
+}
+
+body{
+    font-family: "font", sans-serif;
+    background-color: rgb(239, 246, 252);
+    padding-inline: 15%;
+    justify-content: center;
+    justify-items: center;
+}
+header{
+    min-height: 10%;
+    min-width: 80%;
+    padding: 1.3rem;
+    justify-content: space-between;
+    display: flex;
+}
+.top-section{
+    background-image: linear-gradient(to top, rgb(0,66,153),rgb(38,84,211));
+    display: flex;
+    padding: 2.9rem;
+    border-radius: 20px;
+    justify-content: space-between;
+    color: white;
+    gap: 10%;
+    min-width: 100%;
+}
+.simple-button{
+    font-size: 1rem;
+    border: none;
+    padding: 0.9rem;
+    background: none;
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+.simple-button:hover{
+    background-color: rgb(189,180,241);
+}
+.primeiro-bloco{
+    min-width: 50%;
+    justify-content: center;
+    padding: 1.2rem;
+}
+.btn-primeiro-bloco{
+    width: 100%;
+    min-height: 9%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(243,249,255);
+    border-radius: 10px;
+    color: rgb(1,1,102);
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+.btn-primeiro-bloco:hover{
+    background-color: rgb(2,0,56);
+    color: white;
+}
+.trofel{
+    margin-top: 10%;
+    min-width: 30%;
+    background-color: #1900ff;
+    font-size: 10pt;
+    padding-bottom: 0.9rem;
+    padding-inline: 20px;
+    border-radius: 20px;
+    text-align: center;
+    transition:transform 0.3s ease;
+}
+.trofel:hover{
+    transform: translateY(-20px);
+}
+.trofel-h2{
+    font-size: 2.8rem;
+}
+footer{
+    background-color: rgb(215,212,255);
+    margin-top: 2%;
+    justify-content: space-between;
+    font-size: 1rem;
+    display: flex;
+    min-height: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    min-width: 100%;
+}
+
+.present{
+    display: block;
+    justify-items: center;
+    min-width: 30%;
+    background-color: #b6d3ff;
+    font-size: 10pt;
+    padding: 0.9rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    justify-content: center;
+    height: 250px;
+}
+.mid-section{
+    margin-top: 2%;
+    gap: 2%;
+    display: flex;
+    min-width: 100%;
+    padding: 0.5rem;
+    justify-content: center;
+}
+.present:hover{
+    transform: translateY(-20px);
+}
