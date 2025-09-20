@@ -1,0 +1,158 @@
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    #container {
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: block;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 10px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    .input-group button {
+      width: 100%;
+      padding: 8px;
+      background-color: #3897f0;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .input-group button:hover {
+      background-color: #1877c0;
+    }
+
+    .footer {
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: #999;
+      text-decoration: none;
+    }
+
+    .profile {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.username {
+  margin: 10px 0;
+}
+
+.bio {
+  color: #999;
+}
+
+.stats {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.stats li {
+  display: inline-block;
+  margin-right: 10px;
+  color: #555;
+}
+
+.stats li strong {
+  color: #000;
+}
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <img class="logo" src="insta.png" alt="Instagram Logo" width="200">
+    <div>
+      <div class="input-group">
+        <label for="username">Usuário</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="input-group">
+        <button onclick="clicou()">Entrar</button>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="#">Esqueceu a senha?</a> | <a href="#">Cadastre-se no Instagram</a>
+    </div>
+  </div>
+
+  <div class="profile" id="profile" style="display: none;">
+    <img class="profile-picture" src="saori.png" alt="Imagem de Perfil">
+    <h1 class="username">Saori Kido</h1>
+    <p class="bio">666 anos
+    </p>
+    <ul class="stats">
+      <li><strong>Posts:</strong> 100</li>
+      <li><strong>Seguidores:</strong> 1000</li>
+      <li><strong>Seguindo:</strong> 500</li>
+    </ul>
+  </div>
+
+  <script>
+    function clicou(){
+      let username = document.getElementById("username");
+      let password = document.getElementById("password");
+
+      
+      if(username.value == "saorikido" && password.value == "scat"){
+        let container = document.getElementById("container");
+        let profile = document.getElementById("profile");
+        container.style.display = 'none';
+        container.innerHTML = 'logado';
+        profile.style.display = 'block';
+      }
+
+      username.value = "";
+      password.value = "";
+    }
+  </script>
+</body>
+</html>
